@@ -19,9 +19,9 @@ class Program
 
     }
     static void Main(string[] args)
-    {
-        Console.WriteLine($"Umgekehrte Zahl: {Twist(4567)}");
-        Console.WriteLine($"Umgekehrte Zahl: {Twist(1234567890)}");
+    { 
+        Console.WriteLine($"Umgekehrte Zahl: {Twist(4567)}"); // 7654
+        Console.WriteLine($"Umgekehrte Zahl: {Twist(1234567890)}"); // 987654321
 
     }
 }
