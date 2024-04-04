@@ -34,16 +34,20 @@ class Student
         Student.anzahl++;
     }
 
-    public Student (string name, string fach, int geburtjahr = -1, int matrikelnummer = -1) // -1 sind Default-Werte
+    //public Student (string name, string fach, int geburtjahr = -1, int matrikelnummer = -1) // -1 sind Default-Werte
+    //{
+    //    this.name = name;
+    //    this.geburtjahr = geburtjahr;
+    //    this.matrikelnummer = matrikelnummer;
+    //    this.fach = fach;
+    //    Student.anzahl++;
+
+    //}
+
+    public Student(string name, string fach, int geburtjahr, int matrikelnummer) : this(name, geburtjahr, matrikelnummer)
     {
-        this.name = name;
-        this.geburtjahr = geburtjahr;
-        this.matrikelnummer = matrikelnummer;
         this.fach = fach;
-        Student.anzahl++;
-
     }
-
 
     public void Studieren()
     {
@@ -123,10 +127,11 @@ class Hochschule
     {
         Student s1 = new Student("San");
         Student s2 = new Student("Sanji", 1990);
-        Student s3 = new Student("San Shine", 1999, 10101);
+        Student s3 = new Student("San Shine", 1999, 10111);
         Student s4 = new Student("John Doe", "Informatik", 1981, 2534);
+        
 
-        Student[] students = { s1, s2, s3, s4 };
+        Student[] students = { s1, s2, s3, s4};
 
         foreach( Student student in students)
         {
@@ -138,8 +143,8 @@ class Hochschule
 
         Console.WriteLine(Student.GetAnzahl());
 
-        Console.WriteLine(s4.IsValid());
+        Console.WriteLine(s3.IsValid());
 
-        Console.WriteLine(s4);
+        Console.WriteLine(s3);
     }
 }
