@@ -26,23 +26,13 @@ class Student
         Student.anzahl++;
     }
 
-    public Student(string name, int geburtjahr = -1, int matrikelnummer = -1) // -1 sind Default-Werte
+    public Student(string name, int geburtjahr = -1, int matrikelnummer = -1) 
     {
         this.name = name;
         this.geburtjahr = geburtjahr;
         this.matrikelnummer = matrikelnummer;
         Student.anzahl++;
     }
-
-    //public Student (string name, string fach, int geburtjahr = -1, int matrikelnummer = -1) // -1 sind Default-Werte
-    //{
-    //    this.name = name;
-    //    this.geburtjahr = geburtjahr;
-    //    this.matrikelnummer = matrikelnummer;
-    //    this.fach = fach;
-    //    Student.anzahl++;
-
-    //}
 
     public Student(string name, string fach, int geburtjahr, int matrikelnummer) : this(name, geburtjahr, matrikelnummer)
     {
