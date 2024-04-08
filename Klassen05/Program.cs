@@ -33,7 +33,7 @@ class MyInteger
 
         }else if(this.value%2 != 0)
         {
-            for(int i = 4; i < this.value; i++)
+            for(int i = 4; i <= this.value/2 ; i++)
             {
                 if(this.value % i != 0)
                 {
@@ -66,7 +66,7 @@ class MyInteger
         }
         else if (number % 2 != 0)
         {
-            for (int i = 4; i < number; i++)
+            for (int i = 4; i <= number/2; i++)
             {
                 if (number % i != 0)
                 {
@@ -101,7 +101,7 @@ class MyInteger
         }
         else if (number % 2 != 0)
         {
-            for (int i = 4; i < number; i++)
+            for (int i = 4; i <= number/2; i++)
             {
                 if (number % i != 0)
                 {
@@ -142,13 +142,7 @@ class MyInteger
 
     static public int ParseInt(char[] number)
     {
-
-        return int.Parse(number);
-
-        //for(int i = 0; i < number.Length; i++)
-        //{
-            
-        //}
+        return int.Parse(number);  
     }
 
     static public int ParseInt(string number)
@@ -182,6 +176,10 @@ class MyInteger
         char[] a = { '2', '3','4','5' };
 
         Console.WriteLine(ParseInt(a));
+
+        int c = 11 / 2;
+        Console.WriteLine(c);
+
     }
 }
 
